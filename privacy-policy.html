@@ -457,12 +457,13 @@
                 <li><strong>Subscription Management:</strong> Processing and tracking active premium subscriptions</li>
             </ul>
 
-            <h4>4.4 App Performance & Improvement</h4>
+            <h4>4.4 App Performance & Improvement (via Firebase Analytics)</h4>
             <ul>
-                <li><strong>Bug Fixes:</strong> Identifying and resolving technical issues and crashes</li>
-                <li><strong>Performance Optimization:</strong> Improving app responsiveness and user experience</li>
-                <li><strong>Feature Enhancement:</strong> Understanding which features are most valuable to users</li>
+                <li><strong>Crash Analytics:</strong> Identifying and fixing technical issues and crashes</li>
+                <li><strong>Performance Monitoring:</strong> Improving app responsiveness and user experience</li>
+                <li><strong>Feature Usage Analytics:</strong> Understanding which features are most valuable to users</li>
                 <li><strong>System Monitoring:</strong> Ensuring app stability and reliability</li>
+                <li><strong>Data Source:</strong> This data is collected by Firebase Analytics and processed by Google</li>
             </ul>
 
             <h4>4.5 Legal & Security</h4>
@@ -474,11 +475,12 @@
 
             <h3>What We Do NOT Do With Your Data</h3>
             <ul>
-                <li>❌ We do not sell your personal data to third parties</li>
-                <li>❌ We do not share your data with advertisers or marketing companies</li>
-                <li>❌ We do not use your data for behavioral targeting or profiling</li>
+                <li>❌ We do not sell your personal data directly to third parties for cash/compensation</li>
+                <li>❌ We do not share your personal data with advertisers or marketing companies</li>
+                <li>❌ We do not use your personal data for behavioral targeting or profiling (beyond Firebase analytics)</li>
                 <li>❌ We do not share your learning data with educational institutions without your consent</li>
                 <li>❌ We do not use your data for political or social profiling</li>
+                <li>✅ <strong>Important:</strong> We do share analytics data with Google Firebase (see section 6 for details)</li>
             </ul>
         </section>
 
@@ -522,14 +524,27 @@
                 </tr>
             </table>
 
-            <h3>5.2 Cloud Storage (Optional - Google Services Only)</h3>
-            <p>When you choose to sign in with Google or make purchases, some data may be handled by Google:</p>
+            <h3>5.2 Cloud Storage (Google Firebase)</h3>
+            <p>PlusChinese sends data to Google Firebase for authentication and analytics:</p>
 
-            <h4>Firebase (Google)</h4>
+            <h4>Firebase (Google) - Always Active</h4>
             <ul>
-                <li>Temporary authentication tokens (expires after 30 days)</li>
-                <li>Session information while logged in</li>
-                <li>Google Sign-In credentials are processed securely by Google</li>
+                <li><strong>Authentication Data (when you sign in):</strong>
+                    <ul>
+                        <li>Temporary authentication tokens (expires after 30 days)</li>
+                        <li>Session information while logged in</li>
+                        <li>Google Sign-In credentials are processed securely by Google</li>
+                    </ul>
+                </li>
+                <li><strong>Analytics Data (always active):</strong>
+                    <ul>
+                        <li>App crash reports and error diagnostics</li>
+                        <li>App performance metrics</li>
+                        <li>Feature usage statistics</li>
+                        <li>User session information (duration, feature access)</li>
+                        <li>Device identifiers and OS information</li>
+                    </ul>
+                </li>
             </ul>
             <p><strong>Location:</strong> Firebase servers are located in the United States, but may replicate data globally. For EU users, Google has mechanisms in place to ensure GDPR compliance.</p>
 
@@ -587,12 +602,28 @@
                 <li><strong>User Control:</strong> You can opt out through Android Settings > Google > Manage your Google Account > Data & Privacy > Manage your advertising settings</li>
             </ul>
 
-            <h3>6.2 Firebase (Google)</h3>
+            <h3>6.2 Firebase (Google) - Authentication & Analytics</h3>
             <ul>
-                <li><strong>Purpose:</strong> Authentication service and optional analytics</li>
-                <li><strong>When Used:</strong> When you sign in with Google or if future analytics features are enabled</li>
+                <li><strong>Purpose:</strong> Authentication service AND app analytics/performance tracking</li>
+                <li><strong>When Used:</strong> 
+                    <ul>
+                        <li>Authentication: When you sign in with Google</li>
+                        <li>Analytics: Continuously to track app performance, crashes, and user behavior</li>
+                    </ul>
+                </li>
+                <li><strong>Data Shared with Firebase:</strong>
+                    <ul>
+                        <li>App crash reports and error logs</li>
+                        <li>App performance metrics</li>
+                        <li>User session information</li>
+                        <li>Feature usage analytics</li>
+                        <li>Device and OS information</li>
+                    </ul>
+                </li>
+                <li><strong>Data NOT Shared:</strong> Your actual learning progress, learned words, or personal preferences are NOT sent to Firebase</li>
                 <li><strong>Privacy:</strong> Subject to <a href="https://firebase.google.com/terms" target="_blank">Firebase Terms</a> and <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a></li>
                 <li><strong>Data Processing:</strong> Located in the US with EU Data Processing Agreements in place for GDPR compliance</li>
+                <li><strong>Opt-Out:</strong> Firebase analytics is essential for app stability. You cannot opt-out without disabling core app functionality.</li>
             </ul>
 
             <h3>6.3 Text-to-Speech Engine</h3>
@@ -605,11 +636,12 @@
             <h3>6.4 Services NOT Used</h3>
             <p>To further protect your privacy, PlusChinese explicitly does NOT use:</p>
             <ul>
-                <li>❌ <strong>Google Analytics:</strong> We do not track user behavior with Google Analytics</li>
-                <li>❌ <strong>Facebook Pixel or Meta Conversion API:</strong> No third-party behavioral tracking</li>
-                <li>❌ <strong>Mixpanel, Amplitude, Flurry:</strong> No mobile analytics platforms</li>
-                <li>❌ <strong>Crashlytics (for user identification):</strong> Crash reporting only, no personal data</li>
+                <li>❌ <strong>Google Analytics:</strong> We use Firebase Analytics (not Google Analytics standalone)</li>
+                <li>❌ <strong>Facebook Pixel or Meta Conversion API:</strong> No Meta/Facebook tracking</li>
+                <li>❌ <strong>Mixpanel, Amplitude, Flurry:</strong> No third-party mobile analytics platforms</li>
+                <li>❌ <strong>Crashlytics (for user identification):</strong> Crash reporting only, no personal identification</li>
                 <li>❌ <strong>Ad Networks:</strong> No mobile ad networks or programmatic advertising</li>
+                <li>❌ <strong>Marketing Attribution Tools:</strong> No AppsFlyer, Branch, or similar services</li>
             </ul>
         </section>
 
@@ -1175,16 +1207,37 @@
             </ul>
 
             <h3>Third-Party Analytics & Advertising</h3>
-            <p>PlusChinese explicitly does NOT include:</p>
+            <p>PlusChinese does NOT include:</p>
             <ul>
-                <li>Google Analytics or Firebase Analytics (user-level tracking)</li>
-                <li>Facebook Pixel or Meta Conversion API</li>
-                <li>Ad network SDKs (Google Ads, Facebook Ads, etc.)</li>
-                <li>Mobile measurement partners (AppsFlyer, Branch, etc.)</li>
+                <li>❌ Google Analytics (standalone service)</li>
+                <li>❌ Facebook Pixel or Meta Conversion API</li>
+                <li>❌ Ad network SDKs (Google Ads, Facebook Ads, etc.)</li>
+                <li>❌ Mobile measurement partners (AppsFlyer, Branch, etc.)</li>
             </ul>
 
-            <h4>Note on Firebase</h4>
-            <p>While we use Firebase for authentication, we do not enable Firebase Analytics for behavioral tracking. If Firebase Analytics is used in the future, this policy will be updated immediately.</p>
+            <p><strong>However, PlusChinese DOES use:</strong></p>
+            <ul>
+                <li>✅ <strong>Firebase Analytics:</strong> For app performance, crash reporting, and usage analytics (see section 6.2)</li>
+            </ul>
+
+            <h4>About Firebase Analytics</h4>
+            <p><strong>Firebase Analytics is ENABLED by default</strong> and collects:</p>
+            <ul>
+                <li>App crash reports and error logs</li>
+                <li>App performance metrics</li>
+                <li>Feature usage frequency</li>
+                <li>User session duration</li>
+                <li>Device model and OS version</li>
+                <li>Installation and uninstall events</li>
+            </ul>
+            <p><strong>Firebase Analytics does NOT collect:</strong></p>
+            <ul>
+                <li>Your personal identity (unless you sign in)</li>
+                <li>Your learning progress or learned words</li>
+                <li>Your settings or preferences</li>
+                <li>Payment information</li>
+            </ul>
+            <p>This data helps us improve app stability and fix bugs. It is processed according to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
 
             <h3>Advertising ID Management</h3>
             <p>Your Android Advertising ID is accessible to Google and potentially other apps, but we do not use it for tracking. You can opt out:</p>
@@ -1203,9 +1256,7 @@
             <div class="contact-box">
                 <h3>Privacy Inquiries & Requests</h3>
                 <p><strong>Email:</strong> <a href="mailto:[pluschinese@gmail.com]">[pluschinese@gmail.com]</a></p>
-                <p><strong>Company Name:</strong> [YOUR_COMPANY_NAME]</p>
-                <p><strong>Address:</strong> [YOUR_ADDRESS]</p>
-                <p><strong>Phone:</strong> [YOUR_PHONE_NUMBER]</p>
+                <p><strong>Company Name:</strong> François Bonnardet Devs</p>
             </div>
 
             <h3>Types of Requests We Accept</h3>
@@ -1343,7 +1394,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2026 [YOUR_COMPANY_NAME]. All rights reserved.</p>
+            <p>&copy; 2026 François Bonnardet Devs. All rights reserved.</p>
             <p>This Privacy Policy is provided in English. Translations may be available upon request.</p>
             <p><strong>Last Updated: May 10, 2026</strong></p>
             <p>For questions or concerns, contact: <a href="mailto:[pluschinese@gmail.com]">[pluschinese@gmail.com]</a></p>
